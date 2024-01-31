@@ -5,7 +5,8 @@
   <title>YHT's CSS Stuff</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="yht-reset.css">
+  <link rel="stylesheet" href="/yht-reset.css">
+  <link rel="stylesheet" href="/inputs/yht-inputs.css">
   <style>
     main {
       max-width: 960px;
@@ -16,21 +17,28 @@
       margin: 0 auto;
       padding: 1rem;
       text-align: center;
+      gap: 1rem;
+    }
+    article {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
     }
   </style>
 </head>
 <body>
 
 <main>
-  <h1>YHT's CSS Stuff</h1>
-  <ul>
-    <li>
-      <a href="yht-reset.css">YHT's CSS Reset</a>
-    </li>
-    <li>
-      <a href="inputs/index.html">Inputs</a> | <a href="inputs/yht-inputs.css">CSS</a>
-    </li>
-  </ul>
+  <h1>YHT's Inputs</h1>
+  <article>
+    <label for="text-input-2">Text input with pattern:</label>
+    <input
+        class="yht-input"
+        type="email"
+        id="text-input-2"
+        placeholder="Enter any valid email"
+    >
+  </article>
 </main>
 </body>
 </html>

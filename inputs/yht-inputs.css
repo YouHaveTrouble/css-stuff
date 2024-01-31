@@ -1,0 +1,35 @@
+input.yht-input {
+  min-width: 0;
+  border: 1px solid #ccc;
+  transition: border-color 0.2s linear, outline-color 0.2s linear;
+  outline: 2px solid transparent;
+}
+
+input.yht-input:focus-visible {
+  outline: 2px solid black;
+}
+
+input.yht-input:not([type="checkbox"]):not([type="radio"]) {
+  padding: 0.25rem;
+}
+
+input.yht-input:valid:not(:placeholder-shown) {
+  border-color: green;
+}
+
+input.yht-input:invalid:not(:placeholder-shown) {
+  border-color: red;
+}
+
+input.yht-input:invalid:focus-visible:not(:placeholder-shown) {
+  outline: 2px solid red;
+}
+
+input.yht-input:valid:focus-visible:not(:placeholder-shown) {
+  outline: 2px solid green;
+}
+
+label + input.yht-input[required] + label::after {
+  content: '*';
+  color: red;
+}
