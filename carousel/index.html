@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>YHT's CSS Stuff</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/yht-reset.css">
+  <link rel="stylesheet" href="/carousel/yht-carousel.css">
+  <style>
+    main {
+      max-width: 960px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      padding: 1rem;
+      text-align: center;
+      gap: 1rem;
+    }
+    article {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+    .gallery-container {
+      width: min(40rem, 100%);
+      height: 25rem;
+      border: 1px solid #000;
+    }
+    .gallery-container .yht-carousel > * {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #slide1 {
+      background-color: darkblue;
+      color: white;
+    }
+    #slide2 {
+      background-color: darkred;
+      color: white;
+    }
+    #slide3 {
+      background-color: darkgreen;
+      color: white;
+    }
+    #slide4 {
+      background-color: darkorange;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 1rem;
+      padding-block: 0.25rem;
+    }
+
+    .buttons > a {
+      padding: 0.5rem 1rem;
+      background-color: #000;
+      color: #fff;
+      text-decoration: none;
+      user-select: none;
+    }
+  </style>
+</head>
+<body>
+
+<main>
+  <h1>YHT's Carousel</h1>
+  <article>
+    <div class="gallery-container">
+      <div class="yht-carousel horizontal">
+        <div id="slide1">
+          <h2>Slide 1</h2>
+        </div>
+        <div id="slide2">
+          <h2>Slide 2</h2>
+        </div>
+        <div id="slide3">
+          <h2>Slide 3</h2>
+        </div>
+        <div id="slide4">
+          <h2>Slide 4</h2>
+        </div>
+      </div>
+    </div>
+    <div class="buttons">
+      <a href="#slide1">1</a>
+      <a href="#slide2">2</a>
+      <a href="#slide3">3</a>
+      <a href="#slide4">4</a>
+    </div>
+    <p>
+      This one is currently a little bit broken, seems to sometimes refuse to change to one specific slide on chromium.
+    </p>
+  </article>
+</main>
+</body>
+</html>
